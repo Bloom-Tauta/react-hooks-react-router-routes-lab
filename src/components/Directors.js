@@ -2,8 +2,9 @@ import React from "react";
 import { directors } from "../data";
 
 function Directors() {
-  const directorItems = directors.map((director) => (
-    <div key={director.name}>
+  const directorItems = directors.map((director) => {
+    return (
+      <div key={director.name}>
       <h2>{director.name}</h2>
       <ul>
         {director.movies.map((movie) => (
@@ -11,7 +12,8 @@ function Directors() {
         ))}
       </ul>
     </div>
-  ));
+    );
+  });
 
   return (
     <div>
